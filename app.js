@@ -13,18 +13,14 @@ const allowedOrigins = [
     'http://localhost:3000',
     'http://localhost:5173'
 ]
-console.log('---------------------------- testA')
 app.use(cors({
     origin: function (origin, callback) {
-        console.log('---------------- test1', origin)
         if (!origin) return callback(null, true);
         if (allowedOrigins.indexOf(origin) === -1) {
-            console.log('---------------- test2', origin)
             var msg = 'The CORS policy for this site does not ' +
                       'allow access from the specified Origin.';
             return callback(new Error(msg), false);
         }
-        console.log('---------------- test3', origin)
         return callback(null, true);
     }
 }));
@@ -33,7 +29,6 @@ app.use(cors({
 app.use(express.json());
 
 app.all('*', async (req, res) => {
-    console.log('--------------- got request')
     try {
         const targetUrl = TARGET_API + req.originalUrl;
 
