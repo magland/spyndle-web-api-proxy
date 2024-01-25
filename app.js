@@ -11,7 +11,8 @@ const TARGET_API = 'http://a03f3783a4f8a4745b529e39c1416ba9-927245827.us-east-1.
 const allowedOrigins = [
     'https://spyndle.surge.sh',
     'http://localhost:3000',
-    'http://localhost:5173'
+    'http://localhost:5173',
+    'https://spyndle.vercel.app'
 ]
 app.use(cors({
     origin: function (origin, callback) {
