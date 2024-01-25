@@ -1,0 +1,5 @@
+# one time:
+heroku create
+
+# then to deploy:
+git push heroku main
