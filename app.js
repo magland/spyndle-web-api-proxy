@@ -5,7 +5,8 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const TARGET_API = 'http://a03f3783a4f8a4745b529e39c1416ba9-927245827.us-east-1.elb.amazonaws.com'
+const TARGET_API = 'ae5a8a16ba119482392d961a26af51d1-1282530926.us-east-1.elb.amazonaws.com'
+
 
 // Enable CORS
 const allowedOrigins = [
